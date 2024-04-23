@@ -45,7 +45,7 @@ namespace boat.Models
 
                 NpgsqlDataReader dataReader = npgsqlCommand.ExecuteReader();
                 if (dataReader.Read())
-                {                   
+                {           
                    MainForm form = new MainForm();
                    form.ShowDialog();
                 }

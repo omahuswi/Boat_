@@ -24,5 +24,11 @@ namespace boat
             Authorization  authorization = new Authorization(currentUser);
             authorization.Authorize();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegForm form = new RegForm();
+            form.ShowDialog();
+        }
     }
 }
