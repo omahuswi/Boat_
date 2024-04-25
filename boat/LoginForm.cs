@@ -21,12 +21,14 @@ namespace boat
         private void btnLogin_Click(object sender, EventArgs e)
         {
             User currentUser = new User(tbxLogin.Text, tbxPassword.Text);
+            this.Hide();
             Authorization  authorization = new Authorization(currentUser);
-            authorization.Authorize();
+            authorization.Authorize();            
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             RegForm form = new RegForm();
             form.ShowDialog();
         }

@@ -100,7 +100,7 @@
             // lblAuthorization
             // 
             this.lblAuthorization.AutoSize = true;
-            this.lblAuthorization.Location = new System.Drawing.Point(272, 98);
+            this.lblAuthorization.Location = new System.Drawing.Point(260, 93);
             this.lblAuthorization.Name = "lblAuthorization";
             this.lblAuthorization.Size = new System.Drawing.Size(94, 16);
             this.lblAuthorization.TabIndex = 0;
@@ -109,12 +109,13 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(275, 295);
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(260, 287);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(68, 16);
+            this.linkLabel1.Size = new System.Drawing.Size(144, 16);
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
+            this.linkLabel1.Text = "Зарегистрироваться";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // LoginForm

@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace boat.Models
 {
@@ -22,7 +25,31 @@ namespace boat.Models
         private string _firstName;
         private string _familyName;
         private DateTime _birthDate;
-       
+
+        public Customer(string login, string password, int userid) : base(login, password)
+        {
+            NpgsqlConnection conn = new NpgsqlConnection($"Host=localhost;Port=5432;Username=postgres;Password=11111111;Database=boat");
+            conn.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand($"select * from customer where user_id = {userid}");
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.Text;
+            NpgsqlDataReader dataReader = cmd.ExecuteReader();
+            dataReader.Read();
+
+            Email = dataReader["customer_email"].ToString();
+            Phone = dataReader["customer_phone"].ToString();
+            IdNumber = dataReader["customer_id_number"].ToString();
+            DocumentName = dataReader["customer_document_name"].ToString();
+            FirstName = dataReader["customer_first_name"].ToString();
+            FamilyName = dataReader["customer_family_name"].ToString();
+            BirthDate = Convert.ToDateTime(dataReader["customer_date_of_birth"]);
+            Organisation = dataReader["customer_organisation"].ToString();
+            Street = dataReader["customer_street"].ToString();
+            House = dataReader["customer_house"].ToString() ;
+            City = dataReader["customer_city"].ToString();
+            conn.Close();
+        }
+        
 
         public Customer(string login, string password, string email, string phone, string idNumber, string documentName, string firstName, string familyName, DateTime birthDate) : base(login, password)
         {

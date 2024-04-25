@@ -23,15 +23,15 @@ namespace boat.Models
                 {
                     MessageBox.Show("15сек");
                 }
-                else { MessageBox.Show("20сек"); }               
+                else { MessageBox.Show("+20сек"); }               
                 
                 loginCount = 0;
             }            
             return loginCount;            
-        }
-
+        }      
+        
         public void Authorize()
-        {            
+        {
             NpgsqlConnection npgsqlConnection = new NpgsqlConnection($"Host=localhost;Port=5432;Username=postgres;Password=11111111;Database=boat");
             try
             {
@@ -45,9 +45,20 @@ namespace boat.Models
 
                 NpgsqlDataReader dataReader = npgsqlCommand.ExecuteReader();
                 if (dataReader.Read())
-                {           
-                   MainForm form = new MainForm();
-                   form.ShowDialog();
+                {
+                    user.Id = Convert.ToInt32(dataReader["user_id"]);
+                    switch (dataReader["role_id"])
+                    {
+                        
+                        case 1: user = new Customer(user.Login, user.Password, user.Id);
+                            break;
+                        case 2: 
+                            break;
+                        case 3:
+                            MainForm form = new MainForm(user);
+                            form.ShowDialog();
+                            break;
+                    }                   
                 }
                 else
                 {

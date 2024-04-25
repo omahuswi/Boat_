@@ -26,6 +26,7 @@ namespace boat
                     tbxPhone.Text, cbxDocument.Text , tbxIdNumber.Text, tbxFirstName.Text, tbxFamilyName.Text, dtpDateOfBirth.Value);
                 Registration registration = new Registration(user);
                 registration.GetRegistration();
+                this.Close();
             }
         }
     }

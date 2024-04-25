@@ -12,6 +12,7 @@ namespace boat.Models
         private int _userId;
         private string _userLogin;
         private string _userPassword;
+       
         
 
         public User(string login, string password)
@@ -22,7 +23,7 @@ namespace boat.Models
 
         public int Id { get => _userId; set => _userId = value; }
         public string Login { get => _userLogin; set => _userLogin = value; }
-        public string Password { get => _userPassword; set => _userPassword = value; }       
+        public string Password { get => _userPassword; set => _userPassword = value; }
         
     }
 }

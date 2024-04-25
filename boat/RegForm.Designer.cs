@@ -132,10 +132,10 @@
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.Size = new System.Drawing.Size(276, 22);
             this.tbxPassword.TabIndex = 10;
+            this.tbxPassword.UseSystemPasswordChar = true;
             // 
             // cbxDocument
             // 
-            this.cbxDocument.FormattingEnabled = true;
             this.cbxDocument.Items.AddRange(new object[] {
             "Паспорт РФ",
             "Загранпаспорт"});
