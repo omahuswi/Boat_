@@ -180,6 +180,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "World yachts";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);

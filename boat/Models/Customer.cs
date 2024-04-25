@@ -10,9 +10,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 namespace boat.Models
 {
     public class Customer: User
-    {
-        
-        
+    {            
         private string _organisation;
         private string _street;
         private string _house;
@@ -26,7 +24,7 @@ namespace boat.Models
         private string _familyName;
         private DateTime _birthDate;
 
-        public Customer(string login, string password, int userid) : base(login, password)
+        public Customer(string login, string password, int userid) : base(login, password, userid)
         {
             NpgsqlConnection conn = new NpgsqlConnection($"Host=localhost;Port=5432;Username=postgres;Password=11111111;Database=boat");
             conn.Open();

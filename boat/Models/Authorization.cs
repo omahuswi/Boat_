@@ -55,6 +55,7 @@ namespace boat.Models
                         case 2: 
                             break;
                         case 3:
+                            user = new Admin(user.Login, user.Password, user.Id);                            
                             MainForm form = new MainForm(user);
                             form.ShowDialog();
                             break;
