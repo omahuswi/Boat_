@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace boat.Models
@@ -32,16 +33,17 @@ namespace boat.Models
         
         public void Authorize()
         {
-            NpgsqlConnection npgsqlConnection = new NpgsqlConnection($"Host=localhost;Port=5432;Username=postgres;Password=11111111;Database=boat");
+            DBStatement dbConn = DBStatement.Instance;
+            NpgsqlConnection conn = dbConn.GetConnection();
             try
             {
-                if (npgsqlConnection.State == ConnectionState.Open)
+                if (conn.State == ConnectionState.Open)
                 {
-                    npgsqlConnection.Close();
+                    conn.Close();
                 }
-                npgsqlConnection.Open();
+                conn.Open();
                 NpgsqlCommand npgsqlCommand = new NpgsqlCommand($"select * from \"user\" where user_login = \'{user.Login}\' and user_password=\'{user.Password}\'");
-                npgsqlCommand.Connection = npgsqlConnection;
+                npgsqlCommand.Connection = conn;
 
                 NpgsqlDataReader dataReader = npgsqlCommand.ExecuteReader();
                 if (dataReader.Read())
@@ -74,7 +76,7 @@ namespace boat.Models
             }
             finally
             {
-                npgsqlConnection.Close();
+                conn.Close();
             }
             
         }

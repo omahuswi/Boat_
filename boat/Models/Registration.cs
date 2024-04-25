@@ -21,8 +21,9 @@ namespace boat.Models
         public void GetRegistration()
         {
             if (newUser is Customer) 
-            {                 
-                NpgsqlConnection conn = new NpgsqlConnection($"Host=localhost;Port=5432;Username=postgres;Password=11111111;Database=boat");
+            {
+                DBStatement dbConn = DBStatement.Instance;
+                NpgsqlConnection conn = dbConn.GetConnection();
                 conn.Open();
                 NpgsqlCommand cmd = new NpgsqlCommand($"select add_new_customer(\'{(newUser as Customer).Login}\', \'{(newUser as Customer).Password}\', \'" +
                     $"{(newUser as Customer).FirstName}\', \'{(newUser as Customer).FamilyName}\', \'{(newUser as Customer).BirthDate:dd.MM.yyyy}\', \'{(newUser as Customer).Email}\', \'" +
