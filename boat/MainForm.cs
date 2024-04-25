@@ -4,9 +4,6 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 
-
-
-
 namespace boat
 {
     public partial class MainForm : Form
