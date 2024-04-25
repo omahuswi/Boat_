@@ -20,10 +20,10 @@ namespace boat
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            User currentUser = new User(tbxLogin.Text, tbxPassword.Text);
-            this.Hide();
+            User currentUser = new User(tbxLogin.Text, tbxPassword.Text);            
             Authorization  authorization = new Authorization(currentUser);
-            authorization.Authorize();            
+            authorization.Authorize(this);
+            
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

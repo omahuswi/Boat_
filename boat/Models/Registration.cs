@@ -41,7 +41,7 @@ namespace boat.Models
                 conn.Close();
             }
             Authorization authorization = new Authorization(newUser);
-            authorization.Authorize();
+            authorization.Authorize(new LoginForm());
         }
     }
 }

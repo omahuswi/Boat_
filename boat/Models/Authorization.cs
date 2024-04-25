@@ -22,7 +22,7 @@ namespace boat.Models
                 Properties.Settings.Default.pauseCount++;
                 if (Properties.Settings.Default.pauseCount == 1)
                 {
-                    MessageBox.Show("15сек");
+                    MessageBox.Show("15сек"); //TODO доделать
                 }
                 else { MessageBox.Show("+20сек"); }               
                 
@@ -31,7 +31,7 @@ namespace boat.Models
             return loginCount;            
         }      
         
-        public void Authorize()
+        public void Authorize(LoginForm lform)
         {
             DBStatement dbConn = DBStatement.Instance;
             NpgsqlConnection conn = dbConn.GetConnection();
@@ -46,12 +46,12 @@ namespace boat.Models
                 npgsqlCommand.Connection = conn;
 
                 NpgsqlDataReader dataReader = npgsqlCommand.ExecuteReader();
-                if (dataReader.Read())
+                if (dataReader.Read() && dataReader["user_block_date"].ToString() == "")
                 {
-                    user.Id = Convert.ToInt32(dataReader["user_id"]);
+                    lform.Hide();
+                    user.Id = Convert.ToInt32(dataReader["user_id"]);                    
                     switch (dataReader["role_id"])
-                    {
-                        
+                    {                        
                         case 1: user = new Customer(user.Login, user.Password, user.Id);
                             break;
                         case 2: 
@@ -61,13 +61,15 @@ namespace boat.Models
                             MainForm form = new MainForm(user);
                             form.ShowDialog();
                             break;
-                    }                   
+                    }
+                    lform.Hide();
                 }
                 else
                 {
                     MessageBox.Show("Вы ввели неверный логин или пароль.Пожалуйста проверьте ещё раз введенные данные");
                     boat.Properties.Settings.Default.loginCount++;
                     boat.Properties.Settings.Default.loginCount = Pause(boat.Properties.Settings.Default.loginCount);
+                   
                 }
             }
             catch (Exception ex)

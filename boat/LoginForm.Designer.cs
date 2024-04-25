@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.pnlAuthorization = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new System.Windows.Forms.Button();
             this.tbxPassword = new System.Windows.Forms.TextBox();
             this.tbxLogin = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblAuthorization = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pnlAuthorization.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,18 @@
             this.pnlAuthorization.Name = "pnlAuthorization";
             this.pnlAuthorization.Size = new System.Drawing.Size(800, 450);
             this.pnlAuthorization.TabIndex = 0;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(260, 287);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(144, 16);
+            this.linkLabel1.TabIndex = 6;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Зарегистрироваться";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // btnLogin
             // 
@@ -106,18 +118,6 @@
             this.lblAuthorization.TabIndex = 0;
             this.lblAuthorization.Text = "Авторизация";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(260, 287);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(144, 16);
-            this.linkLabel1.TabIndex = 6;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Зарегистрироваться";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -125,7 +125,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pnlAuthorization);
             this.Name = "LoginForm";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Авторизация";
             this.pnlAuthorization.ResumeLayout(false);
             this.pnlAuthorization.PerformLayout();
             this.ResumeLayout(false);

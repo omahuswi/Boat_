@@ -157,6 +157,7 @@
             this.btnRemove.TabIndex = 1;
             this.btnRemove.Text = "Удалить";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnAdd
             // 
@@ -167,6 +168,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 

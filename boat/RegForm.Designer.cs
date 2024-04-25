@@ -54,7 +54,7 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(333, 48);
+            this.lblTitle.Location = new System.Drawing.Point(256, 29);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(91, 16);
             this.lblTitle.TabIndex = 0;
@@ -63,7 +63,7 @@
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(200, 95);
+            this.lblFirstName.Location = new System.Drawing.Point(208, 80);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(33, 16);
             this.lblFirstName.TabIndex = 1;
@@ -72,7 +72,7 @@
             // lblFamilyName
             // 
             this.lblFamilyName.AutoSize = true;
-            this.lblFamilyName.Location = new System.Drawing.Point(167, 135);
+            this.lblFamilyName.Location = new System.Drawing.Point(175, 120);
             this.lblFamilyName.Name = "lblFamilyName";
             this.lblFamilyName.Size = new System.Drawing.Size(66, 16);
             this.lblFamilyName.TabIndex = 2;
@@ -81,7 +81,7 @@
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Location = new System.Drawing.Point(187, 184);
+            this.lblLogin.Location = new System.Drawing.Point(195, 169);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(46, 16);
             this.lblLogin.TabIndex = 4;
@@ -90,7 +90,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(139, 443);
+            this.label6.Location = new System.Drawing.Point(147, 428);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 16);
             this.label6.TabIndex = 5;
@@ -99,7 +99,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(177, 233);
+            this.lblPassword.Location = new System.Drawing.Point(185, 218);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(56, 16);
             this.lblPassword.TabIndex = 6;
@@ -107,28 +107,28 @@
             // 
             // tbxFirstName
             // 
-            this.tbxFirstName.Location = new System.Drawing.Point(251, 89);
+            this.tbxFirstName.Location = new System.Drawing.Point(259, 74);
             this.tbxFirstName.Name = "tbxFirstName";
             this.tbxFirstName.Size = new System.Drawing.Size(276, 22);
             this.tbxFirstName.TabIndex = 7;
             // 
             // tbxFamilyName
             // 
-            this.tbxFamilyName.Location = new System.Drawing.Point(251, 132);
+            this.tbxFamilyName.Location = new System.Drawing.Point(259, 117);
             this.tbxFamilyName.Name = "tbxFamilyName";
             this.tbxFamilyName.Size = new System.Drawing.Size(276, 22);
             this.tbxFamilyName.TabIndex = 8;
             // 
             // tbxLogin
             // 
-            this.tbxLogin.Location = new System.Drawing.Point(251, 184);
+            this.tbxLogin.Location = new System.Drawing.Point(259, 169);
             this.tbxLogin.Name = "tbxLogin";
             this.tbxLogin.Size = new System.Drawing.Size(276, 22);
             this.tbxLogin.TabIndex = 9;
             // 
             // tbxPassword
             // 
-            this.tbxPassword.Location = new System.Drawing.Point(251, 227);
+            this.tbxPassword.Location = new System.Drawing.Point(259, 212);
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.Size = new System.Drawing.Size(276, 22);
             this.tbxPassword.TabIndex = 10;
@@ -139,21 +139,21 @@
             this.cbxDocument.Items.AddRange(new object[] {
             "Паспорт РФ",
             "Загранпаспорт"});
-            this.cbxDocument.Location = new System.Drawing.Point(251, 440);
+            this.cbxDocument.Location = new System.Drawing.Point(259, 425);
             this.cbxDocument.Name = "cbxDocument";
             this.cbxDocument.Size = new System.Drawing.Size(276, 24);
             this.cbxDocument.TabIndex = 11;
             // 
             // tbxPhone
             // 
-            this.tbxPhone.Location = new System.Drawing.Point(251, 400);
+            this.tbxPhone.Location = new System.Drawing.Point(259, 385);
             this.tbxPhone.Name = "tbxPhone";
             this.tbxPhone.Size = new System.Drawing.Size(276, 22);
             this.tbxPhone.TabIndex = 15;
             // 
             // tbxEmail
             // 
-            this.tbxEmail.Location = new System.Drawing.Point(251, 357);
+            this.tbxEmail.Location = new System.Drawing.Point(259, 342);
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(276, 22);
             this.tbxEmail.TabIndex = 14;
@@ -161,7 +161,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(195, 403);
+            this.label1.Location = new System.Drawing.Point(203, 388);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 16);
             this.label1.TabIndex = 13;
@@ -170,7 +170,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(200, 363);
+            this.label2.Location = new System.Drawing.Point(208, 348);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 16);
             this.label2.TabIndex = 12;
@@ -178,7 +178,7 @@
             // 
             // dtpDateOfBirth
             // 
-            this.dtpDateOfBirth.Location = new System.Drawing.Point(251, 319);
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(259, 304);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
             this.dtpDateOfBirth.Size = new System.Drawing.Size(276, 22);
             this.dtpDateOfBirth.TabIndex = 16;
@@ -186,7 +186,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(127, 324);
+            this.label3.Location = new System.Drawing.Point(135, 309);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 16);
             this.label3.TabIndex = 17;
@@ -194,7 +194,7 @@
             // 
             // btnRegistration
             // 
-            this.btnRegistration.Location = new System.Drawing.Point(336, 522);
+            this.btnRegistration.Location = new System.Drawing.Point(344, 507);
             this.btnRegistration.Name = "btnRegistration";
             this.btnRegistration.Size = new System.Drawing.Size(75, 23);
             this.btnRegistration.TabIndex = 18;
@@ -204,7 +204,7 @@
             // 
             // tbxIdNumber
             // 
-            this.tbxIdNumber.Location = new System.Drawing.Point(251, 484);
+            this.tbxIdNumber.Location = new System.Drawing.Point(259, 469);
             this.tbxIdNumber.Name = "tbxIdNumber";
             this.tbxIdNumber.Size = new System.Drawing.Size(276, 22);
             this.tbxIdNumber.TabIndex = 20;
@@ -212,7 +212,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(174, 490);
+            this.label4.Location = new System.Drawing.Point(182, 475);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 16);
             this.label4.TabIndex = 19;
@@ -221,7 +221,7 @@
             // chxSalesPerson
             // 
             this.chxSalesPerson.AutoSize = true;
-            this.chxSalesPerson.Location = new System.Drawing.Point(432, 265);
+            this.chxSalesPerson.Location = new System.Drawing.Point(438, 240);
             this.chxSalesPerson.Name = "chxSalesPerson";
             this.chxSalesPerson.Size = new System.Drawing.Size(97, 20);
             this.chxSalesPerson.TabIndex = 21;
@@ -232,7 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 593);
+            this.ClientSize = new System.Drawing.Size(782, 553);
             this.Controls.Add(this.chxSalesPerson);
             this.Controls.Add(this.tbxIdNumber);
             this.Controls.Add(this.label4);
@@ -255,7 +255,8 @@
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.lblTitle);
             this.Name = "RegForm";
-            this.Text = "RegForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Регистрация";
             this.ResumeLayout(false);
             this.PerformLayout();
 
